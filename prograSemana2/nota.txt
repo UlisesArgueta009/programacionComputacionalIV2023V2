@@ -1,0 +1,2 @@
+El archivo contiene practicas de la semana dos en las cuales hicimos conexion
+con bootstrap
