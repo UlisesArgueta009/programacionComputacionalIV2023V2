@@ -4,47 +4,161 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  
  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>-->
-</head>
-<body>
+  <link rel="stylesheet" href="/css/styles.css">
 
-<div class="container mt-3">
+</head>
+<body class="bg-secondary">
+
+<div class="container mt-3 text-white">
   <h2>TABAS Y CONTENIDOS DEL TAB</h2>
+  <h3>Resolucion de trabajo usando tabs</h3>
+  
   <br>
   <!-- Nav tabs -->
   <ul class="nav nav-tabs">
-    <li class="nav-item" id="optionCont1">
-      <a class="nav-link active" data-toggle="tab" href="#cont1">CONTENIDO - 1</a>
+    <li class="nav-item" >
+      <a class="nav-link" id="optionCont1" data-toggle="tab" href="#cont1" >EJERCICIO</a>
     </li>
-    <li class="nav-item" id="optionCont2">
-      <a class="nav-link" data-toggle="tab" href="#cont2">CONTENIDO - 2</a>
+    <li class="nav-item" >
+      <a class="nav-link" id="optionCont2" data-toggle="tab" href="#cont2">INDICACIONES</a>
     </li>
-    <li class="nav-item" id="optionCont3">
-      <a class="nav-link" data-toggle="tab" href="#cont3">CONTENIDO - 3</a>
+    <li class="nav-item" >
+      <a class="nav-link" id="optionCont3" data-toggle="tab" href="#cont3">RESOLUCION</a>
     </li>
   </ul>
 
   <!-- Tab panes -->
-  <div class="tab-content">
+  <div class="tab-content">  
+    <!-- Tab problema -->
     <div id="cont1" class="container tab-pane active"><br>
-      <h3>CONTENIDO - 1</h3>
-      <p>Esta es la opcion de contenido 1</p>
+      <h3>Ejercicio Planteado</h3>
+      <p> Crear una pagina con varios tabas, cada uno mostrando contenido diferente utilizando Boostrap para estilizar los tabs y JavaScript para controlar el 
+        cambio de tabs y mostrar el contenido correspondiente.
+      </p>
     </div>
+    <!-- Tab solucion bostrap -->
     <div id="cont2" class="container tab-pane fade"><br>
-      <h3>CONTENIDO - 2</h3>
-      <p>Esta es la opcion de contenido 2</p>
+      <h3>INDICACIONES</h3>
+      <p>  
+        En micro grupos de 3 integrantes, utilizando Bootstrap deberá crear un sitio web 
+        en donde cree las siguientes páginas: 
+        
+        
+        
+        </p>
+        <ul>
+          <li>
+          1. Home -> incluirá la portada con los datos generales de la asignatura, la 
+          tarea e integrantes.
+          </li>
+          <li>
+            2. Cada integrante deberá crear una página personal en donde incluya 
+            su Curriculum Vitae 
+          </li>
+          <li>
+            3. Una página que contendrá la solución al ejercicio seleccionado por el 
+            equipo (será entregado durante clase teórica) 
+          </li>
+          <li>
+            4. Una página de conclusiones 
+          </li>
+          <li>
+            5. El sitio deberá estar publicado en GITHUB pages
+          </li>
+        </ul>
     </div>
+    <!-- Tab codigo js explicado -->
     <div id="cont3" class="container tab-pane fade"><br>
-      <h3>CONTENIDO - 3</h3>
-      <p>Esta es la opcion de contenido 3.</p>
+      <h3>Control de tabas con JS </h3>
+      <p>De esta manera se soluciono el problema de controlar el cambio de los tabs y mostrar el contenido de cada uno de ellos</p>
+      <p>Creaciond de Constantes </p>
+      <code>
+        const optionCont1 = document.getElementById("optionCont1");<br>
+        const optionCont2 = document.getElementById("optionCont2");<br>
+        const optionCont3 = document.getElementById("optionCont3");<br>
+      </code>
+      <em><p>Se capturaron las etiquetas con id opciones las cuales son las tabs</em></p>
+      <br>
+      <p>Contenido de las tabs</p>
+      <code>
+        //contenido de las tabas <br>
+        const cont1 = document.getElementById("cont1");<br>
+        const cont2 = document.getElementById("cont2");<br>
+        const cont3 = document.getElementById("cont3");<br>
+      </code>
+      <em><p>Se capturaron las etiquetas con id cont1 las cuales son el contenido de las tabs</em></p>
+      <br>
+
+      <p>Funcion mostrar contenido</p>
+      <pre class="pre-scrollable">
+        <code class="">
+          let chose = 1;
+  
+          const changeOption = () => {
+              chose == 1 ? 
+                  optionCont1.classList.value = 'nav-link active',
+                  cont1.classList.value = 'container tab-pane active'
+              ) 
+              : (
+                  optionCont1.classList.value = 'nav-link ',
+                  cont1.classList.value = 'container tab-pane'
+              )
+  
+              chose == 2 ? (
+                  optionCont2.classList.value = 'nav-link active',
+                  cont2.classList.value = 'container tab-pane active'
+              ) 
+              : (
+                  optionCont2.classList.value = 'nav-link ',
+                  cont2.classList.value = 'container tab-pane'
+              )
+  
+              chose == 3 ? (
+                  optionCont3.classList.value = 'nav-link active',
+                  cont3.classList.value = 'container tab-pane active'
+              ) 
+              : (
+                  optionCont3.classList.value = 'nav-link ',
+                  cont3.classList.value = 'container tab-pane'
+              )
+            
+          }
+        </code>
+      </pre>
+
+      <p>Ejecucion de la funcion al clickear el tab correspondiente</p>
+      <pre class="pre-scrollable">
+        <code>
+        //evento al hacer click en las tabs
+        optionCont1.addEventListener('click', ()=>{
+            chose = 1
+            changeOption()
+        })
+
+        optionCont2.addEventListener('click', ()=>{
+            chose = 2
+            changeOption()
+        })
+
+        optionCont3.addEventListener('click', ()=>{
+            chose = 3
+            changeOption()
+        })
+        </code>
+      </pre>
+      
+
     </div>
   </div>
 </div>
 
 <script src="/js/tabsControl.js"></script>
+
+
 
 </body>
 </html>

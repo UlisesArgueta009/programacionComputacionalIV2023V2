@@ -1,3 +1,6 @@
+
+
+
 //guardando tabs
 const optionCont1 = document.getElementById("optionCont1");
 const optionCont2 = document.getElementById("optionCont2");
@@ -42,6 +45,7 @@ const changeOption = () => {
    
 }
 
+//evento al hacer click en las tabs
 optionCont1.addEventListener('click', ()=>{
     chose = 1
     changeOption()
