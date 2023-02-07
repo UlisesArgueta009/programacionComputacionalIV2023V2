@@ -11382,6 +11382,10 @@ html {
   padding: 0.8rem;
 }
 
+.upper-row ul li{
+  list-style: none;
+}
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
@@ -11443,6 +11447,10 @@ html {
 }
 .masthead .masthead-avatar {
   width: 15rem;
+}
+.skillset p
+{
+  margin-bottom: 200px;
 }
 
 @media (min-width: 992px) {
